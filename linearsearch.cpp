@@ -8,7 +8,7 @@ public:
     void accept();
     int search();
     int count();
-    void firstAndLastOccurrence(int& first, int& last);
+    void firstAndLastOccurrence();
 };
 
 void LinearSearch::accept()
@@ -53,12 +53,12 @@ int LinearSearch::count()
     return count;
 }
 
-void LinearSearch::firstAndLastOccurrence(int& first, int& last)
+void LinearSearch::firstAndLastOccurrence()
 {
     cout << "Enter the target to find occurrences: ";
     cin >> t;
-    first = -1;
-    last = -1;
+  int first = -1;
+  int last = -1;
     for (i = 0; i < n; i++)
     {
         if (a[i] == t)
@@ -104,7 +104,7 @@ int main()
             l.count();
             break;
         case 4:
-            l.firstAndLastOccurrence(first, last);
+            l.firstAndLastOccurrence();
             break;
         case 5:
             cout << "Exiting...\n";
